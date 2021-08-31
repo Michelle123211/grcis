@@ -47,9 +47,13 @@ namespace DavidSosvald_MichalTopfer
     {
       Vector3d translation = translationParamName != null ? (Vector3d)p[translationParamName] : defaultTranslation;
       Vector3d rotation = rotationParamName != null ? (Vector3d)p[rotationParamName] : defaultRotation;
+      // convert degrees to radians
+      for (int i = 0; i < 3; i++) { 
+        rotation[i] = MathHelper.DegreesToRadians(rotation[i]);
+      }
       Vector3d scale = scaleParamName != null ? (Vector3d)p[scaleParamName] : defaultScale;
 
-      ToParent = Matrix4d.Scale(scale) * Matrix4d.Rotate(Quaterniond.FromEulerAngles(rotation)) * Matrix4d.CreateTranslation(translation);
+      ToParent = Matrix4d.Scale(scale) * Matrix4d.CreateTranslation(translation) * Matrix4d.Rotate(Quaterniond.FromEulerAngles(rotation));
       FromParent = ToParent.Inverted();
     }
 
