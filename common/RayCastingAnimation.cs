@@ -116,7 +116,7 @@ namespace Rendering
     public AnimatedRayScene ()
     {
       Start = 0.0;
-      End   = 10.0;
+      End   = 120.0;
       time  = 0.0;
     }
   }
