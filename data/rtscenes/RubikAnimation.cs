@@ -31,8 +31,6 @@ scene.Intersectable = root;
 // Background:
 scene.BackgroundColor = new double[] { 0.001, 0.001, 0.001 };
 scene.Background = new StarBackground(scene.BackgroundColor, 600, 0.004, 0.5, 1.6, 1.0);
-//scene.BackgroundColor = new double[] { 0.0, 0.05, 0.07 };
-//scene.Background = new DefaultBackground(scene.BackgroundColor);
 
 // Light sources:
 scene.Sources = new LinkedList<ILightSource>();
@@ -63,20 +61,6 @@ PhongMaterial blue = new PhongMaterial(new double[] { 0.0, 0.0, 1.0 }, 0.0, 0.03
 PhongMaterial red = new PhongMaterial(new double[] { 1.0, 0.0, 0.0 }, 0.0, 0.03, 0.01, 128);
 PhongMaterial green = new PhongMaterial(new double[] { 0.0, 1.0, 0.0 }, 0.0, 0.03, 0.01, 128);
 PhongMaterial yellow = new PhongMaterial(new double[] { 1.0, 1.0, 0.0 }, 0.0, 0.03, 0.01, 128);
-
-PhongMaterial color1 = new PhongMaterial(new double[] { 0.0, 0.0, 1.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color2 = new PhongMaterial(new double[] { 1.0, 0.0, 0.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color3 = new PhongMaterial(new double[] { 0.0, 1.0, 0.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color4 = new PhongMaterial(new double[] { 0.5, 0.0, 1.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color5 = new PhongMaterial(new double[] { 0.0, 0.5, 1.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color6 = new PhongMaterial(new double[] { 1.0, 0.5, 0.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color7 = new PhongMaterial(new double[] { 1.0, 0.0, 0.5 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color8 = new PhongMaterial(new double[] { 0.5, 1.0, 0.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color9 = new PhongMaterial(new double[] { 0.0, 1.0, 0.5 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color10 = new PhongMaterial(new double[] { 0.5, 0.5, 0.0 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color11 = new PhongMaterial(new double[] { 0.0, 0.5, 0.5 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color12 = new PhongMaterial(new double[] { 0.5, 0.0, 0.5 }, 0.0, 0.03, 0.01, 128);
-PhongMaterial color13 = new PhongMaterial(new double[] { 0.5, 0.5, 0.5 }, 0.0, 0.03, 0.01, 128);
 
 // Cubes
 Cube c;
@@ -515,13 +499,6 @@ root.InsertChild(ac, Matrix4d.Identity);
 c.SetAttribute(PropertyName.MATERIAL, bm);
 #endregion
 #endregion
-
-// Center
-//c = new Cube();
-//ac = new AnimatedNodeTransform(a, null, "R", null, new Vector3d(-0.5, -0.5, -0.5)); // Center
-//ac.InsertChild(c, Matrix4d.Identity);
-//root.InsertChild(ac, Matrix4d.Identity);
-//c.SetAttribute(PropertyName.MATERIAL, bm);
 
 
 //////////////////////////////////////////////////
